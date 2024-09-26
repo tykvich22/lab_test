@@ -1,0 +1,14 @@
+// If you want to override variables do it here
+@import 'variables';
+
+$enable-ltr: true; /* stylelint-disable-line scss/dollar-variable-default */
+$enable-rtl: true; /* stylelint-disable-line scss/dollar-variable-default */
+
+// Import styles
+@import '@coreui/coreui-pro/scss/coreui';
+@import '@coreui/coreui-pro/scss/themes/dark';
+
+@import 'layout';
+
+// If you want to add custom CSS you can put it here.
+@import 'custom';

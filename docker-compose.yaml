@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  labex_front:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - '3005:80'
