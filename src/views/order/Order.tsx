@@ -130,28 +130,24 @@ const OrderDetail = (): JSX.Element => {
       printOrDownloadDoc(firstSectionRef, true)
       setFirstSectionCompletePrint(false)
     }
-  }, [firstSectionCompletePrint])
-
-  useEffect(() => {
     if (firstSectionCompleteDownload) {
       printOrDownloadDoc(firstSectionRef, false)
       setFirstSectionCompleteDownload(false)
     }
-  }, [firstSectionCompleteDownload])
-
-  useEffect(() => {
     if (documentRefCompletePrint) {
       printOrDownloadDoc(documentRef, true)
       setDocumentRefCompletePrint(false)
     }
-  }, [documentRefCompletePrint])
-
-  useEffect(() => {
     if (documentRefCompleteDownload) {
       printOrDownloadDoc(documentRef, false)
       setDocumentRefCompleteDownload(false)
     }
-  }, [documentRefCompleteDownload])
+  }, [
+    firstSectionCompletePrint,
+    firstSectionCompleteDownload,
+    documentRefCompletePrint,
+    documentRefCompleteDownload,
+  ])
 
   const handleFirstSectionPrint = () => {
     setFirstSectionCompletePrint(true)
